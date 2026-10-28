@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Victoria Wren | App Developer & Technical QA in Victoria, BC</title>
+<meta name="description" content="Victoria Wren is an app developer and QA engineer in Greater Victoria, BC, working across Unity games, React, Shopify and test tooling. Open to dev and QA roles.">
+<meta name="author" content="Victoria Wren">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://victoriawren.dev/">
+<meta name="theme-color" content="#ECEAE7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F0E11" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+
+<!-- Icons -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- Open Graph (LinkedIn, Facebook, Slack, Discord, iMessage previews) -->
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Victoria Wren">
+<meta property="og:locale" content="en_CA">
+<meta property="og:url" content="https://victoriawren.dev/">
+<meta property="og:title" content="Victoria Wren | App Developer & Technical QA">
+<meta property="og:description" content="Victoria Wren is an app developer and QA engineer in Greater Victoria, BC, working across Unity games, React, Shopify and test tooling. Open to dev and QA roles.">
+<meta property="og:image" content="https://victoriawren.dev/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Victoria Wren, app developer and technical QA in Greater Victoria, BC">
+<meta property="profile:first_name" content="Victoria">
+<meta property="profile:last_name" content="Wren">
+
+<!-- Twitter / X / Bluesky -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Victoria Wren | App Developer & Technical QA">
+<meta name="twitter:description" content="Victoria Wren is an app developer and QA engineer in Greater Victoria, BC, working across Unity games, React, Shopify and test tooling. Open to dev and QA roles.">
+<meta name="twitter:image" content="https://victoriawren.dev/og-image.png">
+<meta name="twitter:image:alt" content="Victoria Wren, app developer and technical QA in Greater Victoria, BC">
+
+<!-- Structured data for search engines -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": "https://victoriawren.dev/",
+  "name": "Victoria Wren | App Developer & Technical QA in Victoria, BC",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://victoriawren.dev/#victoria",
+    "name": "Victoria Wren",
+    "givenName": "Victoria",
+    "familyName": "Wren",
+    "url": "https://victoriawren.dev/",
+    "image": "https://victoriawren.dev/photo.jpg",
+    "email": "mailto:victoriawren93@gmail.com",
+    "jobTitle": "App Developer and Technical QA",
+    "description": "Victoria Wren is an app developer and QA engineer in Greater Victoria, BC, working across Unity games, React, Shopify and test tooling. Open to dev and QA roles.",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Kano"
+    },
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Victoria"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "The Odin Project"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Victoria",
+      "addressRegion": "BC",
+      "addressCountry": "CA"
+    },
+    "knowsAbout": [
+      "Software development",
+      "Quality assurance",
+      "Test automation",
+      "Unity",
+      "Game development",
+      "JavaScript",
+      "React",
+      "Shopify",
+      "Liquid",
+      "PHP",
+      "Node.js",
+      "Firebase",
+      "Discord bots",
+      "Front-end development"
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/victoriawrendev/",
+      "https://github.com/astranoct"
+    ]
+  }
+}
+</script>
+
+<link rel="preload" as="image" href="photo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: single column — header, hero with profile card, then about, experience, skills, recommendations, education, contact panel. */
+/* Palette from the selfie: black lipstick + polka-dot shirt (ink, dot texture), blonde streaks (gold), tapestry rust and cloud blue (accents). */
+:root {
+  --bg: #ECEAE7;
+  --surface: #F8F7F5;
+  --ink: #141216;
+  --muted: #5E5960;
+  --line: #D2CDC8;
+  --accent: #A8392A;
+  --on-accent: #FFFFFF;
+  --cloud: #4F7199;
+  --pass: #3E7A58;
+  --shadow: #141216;
+  /* Contact panel stays dark in both themes */
+  --panel-bg: #141216;
+  --panel-fg: #F1EEE9;
+  --panel-muted: #BAB3AD;
+  --panel-accent: #D9B56A;
+  --panel-line: #36313A;
+  --font-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --font-label: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F0E11; --surface: #1A181D; --ink: #EEEAE5; --muted: #A39DA2; --line: #2C2930;
+    --accent: #E0674D; --on-accent: #141216; --cloud: #7F9FC6; --pass: #6FBF8E; --shadow: #4F7199;
+    --panel-bg: #1F1C23; --panel-line: #3A3540; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F0E11; --surface: #1A181D; --ink: #EEEAE5; --muted: #A39DA2; --line: #2C2930;
+  --accent: #E0674D; --on-accent: #141216; --cloud: #7F9FC6; --pass: #6FBF8E; --shadow: #4F7199;
+  --panel-bg: #1F1C23; --panel-line: #3A3540; color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  background-image: radial-gradient(var(--line) 1.6px, transparent 1.8px);
+  background-size: 18px 18px;
+}
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+.wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+.label {
+  font-family: var(--font-label);
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Header */
+.top { padding-block: 22px; }
+.top .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: center; justify-content: space-between; }
+.top .name { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; text-decoration: none; }
+.top nav { display: flex; flex-wrap: wrap; gap: 6px 20px; }
+.top nav a { text-decoration: none; color: var(--muted); }
+.top nav a:hover { color: var(--accent); }
+.chip { border-color: color-mix(in srgb, var(--cloud) 45%, var(--line)); }
+
+/* Hero */
+.hero { padding-block: 40px 64px; }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+.status {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 4px 12px; border-radius: 999px;
+  background: var(--surface); border: 1px solid var(--line);
+  color: var(--pass);
+}
+.status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--pass); box-shadow: 0 0 0 3px color-mix(in srgb, var(--pass) 25%, transparent); }
+h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(3rem, 8vw, 5.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  margin: 22px 0 18px;
+  text-wrap: balance;
+}
+h1 .wren { color: var(--accent); }
+.lede { font-size: clamp(1.15rem, 2.2vw, 1.35rem); max-width: 36ch; margin: 0 0 28px; color: var(--muted); text-wrap: pretty; }
+.lede strong { color: var(--ink); font-weight: 700; background: linear-gradient(transparent 62%, color-mix(in srgb, var(--panel-accent) 55%, transparent) 62%); }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-display); font-weight: 700; font-size: 1rem;
+  padding: 12px 20px; border-radius: 10px; text-decoration: none; cursor: pointer;
+  border: 2px solid var(--ink); background: var(--surface); color: var(--ink);
+  box-shadow: 4px 4px 0 var(--shadow);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--shadow); }
+.btn:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--shadow); }
+.btn.primary { background: var(--accent); color: var(--on-accent); }
+
+/* Profile card */
+.card {
+  background: var(--surface);
+  border: 2px solid var(--ink);
+  border-radius: 18px;
+  box-shadow: 8px 8px 0 var(--shadow);
+  padding: 24px;
+  transform: rotate(1.2deg);
+}
+.monogram {
+  width: 64px; height: 64px; border-radius: 14px;
+  display: grid; place-items: center;
+  background: var(--accent); color: #fff;
+  font-family: var(--font-display); font-weight: 800; font-size: 1.6rem; letter-spacing: -0.04em;
+  margin-bottom: 14px;
+}
+.photo {
+  display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover;
+  border-radius: 12px; border: 1.5px solid var(--ink); margin-bottom: 18px;
+}
+.card h2 { font-family: var(--font-display); font-size: 1.45rem; margin: 0; line-height: 1.15; }
+.card .role { color: var(--muted); margin: 2px 0 16px; }
+.facts { display: grid; margin: 0; }
+.facts div { display: grid; grid-template-columns: 8.5em minmax(0, 1fr); gap: 10px; padding: 9px 0; border-top: 1px solid var(--line); }
+.facts dt { color: var(--muted); padding-top: 2px; }
+.facts dd { margin: 0; font-weight: 700; }
+
+/* Sections */
+section.block { padding-block: 52px; }
+.sec-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; margin-bottom: 26px; }
+.sec-head h2::after { content: "."; color: var(--accent); }
+.sec-head h2 { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.9rem, 4vw, 2.5rem); letter-spacing: -0.03em; margin: 0; line-height: 1; }
+.sec-head .label { color: var(--muted); }
+
+.about p { max-width: 62ch; margin: 0 0 14px; font-size: 1.12rem; }
+.about p:first-child { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.3rem, 2.5vw, 1.6rem); line-height: 1.35; letter-spacing: -0.01em; }
+
+/* On AI */
+.stance {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: clamp(24px, 5vw, 56px); align-items: start;
+  background: var(--surface); border: 2px solid var(--ink); border-radius: 20px;
+  box-shadow: 8px 8px 0 var(--cloud);
+  padding: clamp(24px, 5vw, 48px);
+}
+.stance .label { color: var(--accent); }
+.stance h2 {
+  font-family: var(--font-display); font-weight: 800; font-size: clamp(2rem, 4.6vw, 3.1rem);
+  letter-spacing: -0.03em; line-height: 1.02; margin: 10px 0 0; text-wrap: balance;
+}
+.stance h2 em { font-style: normal; color: var(--accent); }
+.points { display: grid; gap: 20px; }
+.point { padding-top: 16px; border-top: 1.5px solid var(--line); }
+.point:first-child { padding-top: 0; border-top: 0; }
+.point h3 { font-family: var(--font-display); font-size: 1.2rem; margin: 0 0 4px; }
+.point p { margin: 0; color: var(--muted); max-width: 58ch; }
+
+/* Experience */
+.jobs { display: grid; gap: 16px; }
+.job {
+  display: grid; grid-template-columns: 10rem minmax(0, 1fr); gap: 24px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px;
+}
+.job.current { border: 2px solid var(--ink); box-shadow: 5px 5px 0 var(--shadow); }
+.when { color: var(--muted); font-variant-numeric: tabular-nums; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.now { color: var(--pass); }
+.job h3 { font-family: var(--font-display); font-size: 1.3rem; margin: 0; line-height: 1.2; }
+.job .where { color: var(--muted); margin: 2px 0 12px; }
+.job ul { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; }
+.job li::marker { color: var(--cloud); }
+
+/* Projects */
+.project {
+  display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 32px; align-items: start;
+  background: var(--surface); border: 2px solid var(--ink); border-radius: 18px; box-shadow: 6px 6px 0 var(--shadow);
+  padding: clamp(20px, 4vw, 32px);
+}
+.project .label { color: var(--accent); }
+.project h3 { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.6rem, 3.2vw, 2.1rem); letter-spacing: -0.02em; line-height: 1.05; margin: 8px 0 10px; }
+.project .pitch { font-size: 1.12rem; margin: 0 0 16px; max-width: 46ch; }
+.project ul { margin: 0 0 18px; padding-left: 1.1em; display: grid; gap: 6px; }
+.project li::marker { color: var(--cloud); }
+.project .chips { margin-bottom: 20px; }
+.term {
+  background: var(--panel-bg); color: var(--panel-fg); border-radius: 14px; padding: 18px 18px 14px;
+  font-family: var(--font-label); font-size: 0.86rem; line-height: 1.5; min-width: 0;
+}
+.term-head { display: flex; justify-content: space-between; gap: 10px; color: var(--panel-muted); font-size: 0.72rem; letter-spacing: .08em; text-transform: uppercase; padding-bottom: 10px; border-bottom: 1px solid var(--panel-line); margin-bottom: 10px; }
+.term dl { margin: 0; display: grid; gap: 10px; }
+.term dt { color: var(--panel-accent); font-weight: 500; }
+.term dd { margin: 0; color: var(--panel-muted); font-family: var(--font-body); font-size: 0.92rem; }
+
+/* Skills */
+.skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.group { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+.group h3 { font-family: var(--font-display); font-size: 1.12rem; margin: 0 0 12px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { padding: 3px 12px; border-radius: 999px; border: 1px solid var(--line); font-size: 0.94rem; background: var(--bg); }
+
+/* Recommendations */
+.recs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.rec { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+.rec blockquote { margin: 0; font-size: 1.1rem; }
+.rec blockquote::before { content: "“"; display: block; font-family: var(--font-display); font-weight: 800; font-size: 3rem; line-height: .6; color: var(--accent); margin-bottom: 8px; }
+.rec figcaption { margin-top: auto; }
+.rec figcaption b { display: block; font-family: var(--font-display); }
+.rec figcaption span { color: var(--muted); font-size: 0.92rem; }
+.src { margin-top: 14px; color: var(--muted); font-size: 0.9rem; }
+
+/* Education */
+.edu { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.school { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+.school h3 { font-family: var(--font-display); font-size: 1.2rem; margin: 6px 0 4px; }
+.school p { margin: 0; color: var(--muted); }
+.school .label { color: var(--muted); }
+
+/* Contact */
+.contact { padding-block: 60px 72px; }
+.panel {
+  background: var(--panel-bg); color: var(--panel-fg); border-radius: 22px; padding: clamp(24px, 5vw, 48px);
+  display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 32px; align-items: center;
+}
+.panel h2 { font-family: var(--font-display); font-weight: 800; font-size: clamp(2rem, 4.5vw, 3rem); letter-spacing: -0.03em; line-height: 1.05; margin: 10px 0 12px; text-wrap: balance; color: var(--panel-fg); }
+.panel p { margin: 0; color: var(--panel-muted); max-width: 44ch; }
+.panel .label { color: var(--panel-accent); }
+.links { display: grid; gap: 12px; }
+.linkrow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; border: 1px solid var(--panel-line); border-radius: 12px; padding: 12px 14px; }
+.linkrow .label { width: 5.5rem; flex: none; color: var(--panel-muted); }
+.linkrow .val { flex: 1 1 12rem; min-width: 0; overflow-wrap: anywhere; font-weight: 700; color: var(--panel-fg); }
+.linkrow a.val { text-decoration-thickness: 1.5px; text-underline-offset: 3px; text-decoration-color: var(--panel-accent); }
+.copy { font-family: var(--font-label); font-size: 0.72rem; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--panel-accent); background: transparent; color: var(--panel-accent); cursor: pointer; }
+.copy:hover { background: var(--panel-accent); color: #1D1A3A; }
+
+footer { padding-block: 0 40px; color: var(--muted); }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; }
+
+@media (max-width: 820px) {
+  .hero .wrap, .panel, .project, .stance { grid-template-columns: minmax(0, 1fr); }
+  .card { transform: none; }
+  .skills, .recs, .edu { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .job { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .when { flex-direction: row; flex-wrap: wrap; gap: 4px 12px; }
+  .facts div { grid-template-columns: 7em minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) { .btn, .btn:hover, .btn:active { transition: none; transform: none; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="name" href="#">Victoria Wren</a>
+    <nav class="label" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#on-ai">On AI</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#recommendations">Recommendations</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="status label">Open to work · Greater Victoria</span>
+        <h1>Victoria <span class="wren">Wren</span></h1>
+        <p class="lede"><strong>App developer and technical QA.</strong> I build software, test it thoroughly, and write the tools that hold it together, most recently on Unity mobile games at Kano.</p>
+        <div class="cta">
+          <a class="btn primary" href="#contact">Get in touch</a>
+          <a class="btn" href="#experience">View experience</a>
+        </div>
+      </div>
+
+      <aside class="card" aria-label="Summary">
+        <img class="photo" src="photo.jpg" fetchpriority="high" alt="Victoria Wren" width="560" height="560">
+        <h2>Victoria Wren</h2>
+        <div class="role">Tech generalist · Dev + QA</div>
+        <dl class="facts">
+          <div><dt>Currently</dt><dd>QA Engineer at Kano</dd></div>
+          <div><dt>Studying</dt><dd>University of Victoria</dd></div>
+          <div><dt>Location</dt><dd>Greater Victoria, BC</dd></div>
+          <div><dt>Open to</dt><dd>On-site or hybrid roles</dd></div>
+          <div><dt>Pronouns</dt><dd>She/her</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section class="block about" id="about">
+    <div class="wrap">
+      <div class="sec-head"><h2>About</h2></div>
+      <p>I'm a tech generalist with a background in software development, QA, automation, web technologies and game development.</p>
+      <p>I like learning unfamiliar systems, solving problems, and figuring out how different pieces of technology fit together. I'm comfortable moving between coding, testing, debugging, tooling and collaboration, and I do my best work in roles where I get to wear multiple hats.</p>
+      <p>Curious, adaptable and technically minded, with a practical approach to getting things done.</p>
+    </div>
+  </section>
+
+  <section class="block" id="on-ai">
+    <div class="wrap">
+      <div class="stance">
+        <div>
+          <span class="label">On AI</span>
+          <h2>I learned to code before AI. Now I <em>build with it</em> every day.</h2>
+        </div>
+        <div class="points">
+          <div class="point">
+            <h3>AI is part of how I work</h3>
+            <p>I use AI tools throughout my projects and day-to-day work, and I enjoy it. They help me move faster, try ideas I wouldn't have had time for, and keep my code in line with modern standards. It's one of the most exciting shifts I've seen in this industry.</p>
+          </div>
+          <div class="point">
+            <h3>Grounded in fundamentals</h3>
+            <p>I taught myself web development through The Odin Project in 2020, before AI coding tools went mainstream. Knowing how to read docs, debug by hand and understand why code works is what lets me get real value out of AI, and as a QA engineer I test and own everything I ship.</p>
+          </div>
+          <div class="point">
+            <h3>A fan of the tech, not the companies</h3>
+            <p>I'm not a fan of the ethics of many of the companies behind these products. I think it's worth being clear-eyed about that, and it doesn't change how useful the technology is or how much I like working with it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="experience">
+    <div class="wrap">
+      <div class="sec-head"><h2>Experience</h2></div>
+      <div class="jobs">
+
+        <article class="job current">
+          <div class="when"><span>Jul 2023 – Present</span><span class="label now">Current</span></div>
+          <div>
+            <h3>QA Engineer</h3>
+            <p class="where">Kano · Full-time · Remote</p>
+            <ul>
+              <li>Embedded with the development team producing Unity mobile games, including Monster Country Idle.</li>
+              <li>Fixed bugs in the PHP backend server and built tools there for testing and content management.</li>
+              <li>Integrated custom tools into Unity for data validation and content integration.</li>
+              <li>Take part in code review, feature testing, technical planning and automation scripting.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="when"><span>Dec 2021 – Dec 2022</span></div>
+          <div>
+            <h3>Jr Frontend Web Developer</h3>
+            <p class="where">Pela · Kelowna, BC</p>
+            <ul>
+              <li>Built and maintained features for headless React and native Shopify storefronts on a small e-commerce team.</li>
+              <li>Helped replatform the Lomi website from React to native Shopify, contributing to both the architecture and the from-scratch theme.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="when"><span>May 2021 – Dec 2021</span></div>
+          <div>
+            <h3>Print &amp; Engraving Production Assistant</h3>
+            <p class="where">Pela · Kelowna, BC</p>
+            <ul>
+              <li>Set up reusable print files so industrial printers could batch hundreds of phone cases a day.</li>
+              <li>Streamlined production and order tracking with custom spreadsheet formulas and scripts.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="when"><span>May 2020 – Dec 2021</span></div>
+          <div>
+            <h3>Freelance Developer</h3>
+            <p class="where">Self-employed</p>
+            <ul>
+              <li>Built websites for small businesses.</li>
+              <li>Made front-end templates for independent board game creators to publish their rulesets.</li>
+              <li>Wrote Discord bots for private servers.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="projects">
+    <div class="wrap">
+      <div class="sec-head"><h2>Projects</h2></div>
+      <article class="project">
+        <div>
+          <span class="label">Discord bot · Node.js</span>
+          <h3>Barkwar Toothbeard</h3>
+          <p class="pitch">A Discord bot that lets Magic: The Gathering players share the cards they're hunting for, so trades are easier to find within a server.</p>
+          <ul>
+            <li>Checks every card name against the Scryfall API, skips unknown names and suggests the likely match.</li>
+            <li>Accepts messy pasted lists and strips bullets and quantities automatically.</li>
+            <li>Stores player profiles, want lists and binder links in Firebase Firestore.</li>
+            <li>Per-user rate limiting, plus automated tests and syntax checks in GitHub Actions.</li>
+          </ul>
+          <div class="chips"><span class="chip">Node.js</span><span class="chip">Discord slash commands</span><span class="chip">Firebase Firestore</span><span class="chip">Scryfall API</span><span class="chip">GitHub Actions</span></div>
+          <a class="btn" href="https://github.com/astranoct/barkwar-toothbeard">View on GitHub</a>
+        </div>
+        <div class="term" aria-label="Bot commands">
+          <div class="term-head"><span>Slash commands</span><span>7</span></div>
+          <dl>
+            <div><dt>/createprofile</dt><dd>Set up a profile with collection and trade binder links</dd></div>
+            <div><dt>/addcards</dt><dd>Add cards one at a time or paste a whole list</dd></div>
+            <div><dt>/removecard</dt><dd>Remove a card, with autocomplete</dd></div>
+            <div><dt>/updatelist</dt><dd>Edit your full list in a text box</dd></div>
+            <div><dt>/tradelist</dt><dd>Show your list or another player's</dd></div>
+            <div><dt>/updatelinks</dt><dd>Change your profile links</dd></div>
+            <div><dt>/tradelinks</dt><dd>Show your links or another player's</dd></div>
+          </dl>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="skills">
+    <div class="wrap">
+      <div class="sec-head"><h2>Skills</h2></div>
+      <div class="skills">
+        <div class="group">
+          <h3>Game development</h3>
+          <div class="chips"><span class="chip">Unity</span><span class="chip">Mobile games</span><span class="chip">Content tooling</span><span class="chip">Data validation</span></div>
+        </div>
+        <div class="group">
+          <h3>QA &amp; tooling</h3>
+          <div class="chips"><span class="chip">Quality assurance</span><span class="chip">Feature testing</span><span class="chip">Automation scripting</span><span class="chip">Code review</span><span class="chip">Debugging</span></div>
+        </div>
+        <div class="group">
+          <h3>Web</h3>
+          <div class="chips"><span class="chip">JavaScript</span><span class="chip">React</span><span class="chip">Shopify &amp; Liquid</span><span class="chip">PHP</span><span class="chip">Front-end development</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="recommendations">
+    <div class="wrap">
+      <div class="sec-head"><h2>Recommendations</h2></div>
+      <div class="recs">
+        <figure class="rec">
+          <blockquote>I have worked with much more seasoned developers that didn't pay nearly as much attention to the design details as Victoria does. She has a true talent and eye for it.</blockquote>
+          <figcaption><b>Eve Whillier</b><span>Staff Product Designer, Clio · worked with Victoria on Shopify builds</span></figcaption>
+        </figure>
+        <figure class="rec">
+          <blockquote>She picks up new skills extremely quickly and can thrive with minimal direction but can also gracefully take feedback when it comes up.</blockquote>
+          <figcaption><b>Kate Culver</b><span>Senior Software Developer, D-Wave · Victoria's mentor</span></figcaption>
+        </figure>
+      </div>
+      <p class="src">Excerpts from recommendations on <a href="https://www.linkedin.com/in/victoriawrendev/">LinkedIn</a>.</p>
+    </div>
+  </section>
+
+  <section class="block" id="education">
+    <div class="wrap">
+      <div class="sec-head"><h2>Education</h2></div>
+      <div class="edu">
+        <div class="school">
+          <span class="label">Sep 2025 – Present</span>
+          <h3>University of Victoria</h3>
+          <p>Currently enrolled.</p>
+        </div>
+        <div class="school">
+          <span class="label">Dec 2020 – Feb 2021</span>
+          <h3>The Odin Project</h3>
+          <p>Web development curriculum.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="panel">
+        <div>
+          <span class="label">Contact</span>
+          <h2>Let's work together.</h2>
+          <p>I'm open to developer and QA roles in Greater Victoria, on-site or hybrid. Email is the best way to reach me.</p>
+        </div>
+        <div class="links">
+          <div class="linkrow">
+            <span class="label">Email</span>
+            <a class="val" id="email" href="mailto:victoriawren93@gmail.com">victoriawren93@gmail.com</a>
+            <button class="copy" id="copyEmail" type="button">Copy</button>
+          </div>
+          <div class="linkrow">
+            <span class="label">LinkedIn</span>
+            <a class="val" href="https://www.linkedin.com/in/victoriawrendev/">linkedin.com/in/victoriawrendev</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap label">
+    <span>© 2026 Victoria Wren</span>
+    <span>Greater Victoria, BC</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById('copyEmail');
+  btn.addEventListener('click', function () {
+    var addr = 'victoriawren93@gmail.com';
+    function fallback() {
+      var r = document.createRange();
+      r.selectNodeContents(document.getElementById('email'));
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected';
+      setTimeout(function () { btn.textContent = 'Copy'; }, 2000);
+    }
+    try {
+      navigator.clipboard.writeText(addr).then(function () {
+        btn.textContent = 'Copied';
+        setTimeout(function () { btn.textContent = 'Copy'; }, 2000);
+      }, fallback);
+    } catch (e) { fallback(); }
+  });
+})();
+</script>
+</body>
+</html>
