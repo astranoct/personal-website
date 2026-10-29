@@ -510,25 +510,28 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: s
       <div class="sec-head"><h2>Projects</h2></div>
       <article class="project">
         <div>
-          <span class="label">Mobile and web app · React Native</span>
+          <span class="label">Mobile and web app · React Native · Coming soon to the App Store and Google Play</span>
           <h3>Book Club</h3>
-          <p class="pitch">A cross-platform app for small reading groups. Create a club, invite your friends, and see what everyone is reading together.</p>
+          <p class="pitch">A cross-platform app for small reading groups. Create a club, invite your friends, and read the same book together, with everyone's progress, meetings and next picks in one place. It's headed to the App Store and Google Play soon.</p>
           <ul>
-            <li>Searches Open Library by title, with a "wrong book?" picker for alternate editions.</li>
-            <li>Email invites that open straight into the app, or can be pasted in as a link.</li>
-            <li>Members appear by display name only, and emails are never shown to other members.</li>
-            <li>Ownership passes to another member when the only owner leaves, so a club is never left without one.</li>
+            <li>Shared reading progress: each member logs their own page, and it resets when the club moves to a new book.</li>
+            <li>Schedule meetings with a date, time and note, and keep a list of the books the club has finished.</li>
+            <li>Members suggest books and owners choose the next read. Search uses Open Library, with a "wrong book?" picker for alternate editions.</li>
+            <li>Email invites that open straight into the app, or can be pasted in as a link. Sign in with email or look around as a guest first.</li>
+            <li>Private by default: members appear by display name only, and ownership passes on when the only owner leaves.</li>
+            <li>Built-in support contact form and full account deletion from Settings, backed by Appwrite Functions.</li>
           </ul>
-          <div class="chips"><span class="chip">React Native</span><span class="chip">Expo Router</span><span class="chip">TypeScript</span><span class="chip">Appwrite</span><span class="chip">Open Library API</span><span class="chip">Jest</span></div>
+          <div class="chips"><span class="chip">React Native</span><span class="chip">Expo Router</span><span class="chip">TypeScript</span><span class="chip">Appwrite</span><span class="chip">Appwrite Functions</span><span class="chip">Open Library API</span><span class="chip">Jest</span></div>
           <a class="btn" href="https://github.com/astranoct/bookclub">View on GitHub</a>
         </div>
         <div class="term" aria-label="App screens">
-          <div class="term-head"><span>App screens</span><span>4</span></div>
+          <div class="term-head"><span>App screens</span><span>5</span></div>
           <dl>
-            <div><dt>Home</dt><dd>Every club you're in, with the book each is reading</dd></div>
-            <div><dt>Search</dt><dd>Find a book and set it as a club's current read</dd></div>
+            <div><dt>Home</dt><dd>Every club you're in, with its book, your progress and the next meeting</dd></div>
             <div><dt>Clubs</dt><dd>Create clubs, invite people, join with a link or leave</dd></div>
+            <div><dt>Club page</dt><dd>Current book, shared progress, meetings, finished books and suggestions</dd></div>
             <div><dt>Profile</dt><dd>Set the display name other members see</dd></div>
+            <div><dt>Settings</dt><dd>Contact support, donate, or delete all your information</dd></div>
           </dl>
         </div>
       </article>
