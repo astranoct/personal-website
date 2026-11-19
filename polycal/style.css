@@ -1,0 +1,88 @@
+/* PolyCal pages on victoriawren.dev: same type and colors as the main site. */
+:root {
+  --bg: #ECEAE7;
+  --surface: #F8F7F5;
+  --ink: #141216;
+  --muted: #5E5960;
+  --line: #D2CDC8;
+  --accent: #A8392A;
+  --on-accent: #FFFFFF;
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0F0E11; --surface: #1A181D; --ink: #EEEAE5; --muted: #A39DA2;
+    --line: #2C2930; --accent: #E0674D; --on-accent: #141216;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+a { color: var(--accent); text-underline-offset: 0.15em; }
+a:hover { text-decoration-thickness: 2px; }
+
+.wrap { max-width: 44rem; margin: 0 auto; padding: 0 1rem; }
+
+header.site {
+  border-bottom: 1px solid var(--line);
+  padding: 1rem 0;
+}
+header.site .wrap {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem;
+  align-items: baseline; justify-content: space-between;
+}
+.brand {
+  font-family: var(--font-display); font-weight: 800; font-size: 1.35rem;
+  color: var(--ink); text-decoration: none;
+}
+.brand span { color: var(--accent); }
+nav.site { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; font-size: 0.95rem; }
+nav.site a { color: var(--muted); text-decoration: none; }
+nav.site a:hover, nav.site a[aria-current="page"] { color: var(--ink); text-decoration: underline; }
+
+main { padding: 2.5rem 0 3rem; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; letter-spacing: -0.01em; }
+h1 { font-size: clamp(2rem, 6vw, 2.75rem); font-weight: 800; margin: 0 0 0.5rem; }
+h2 { font-size: 1.4rem; font-weight: 700; margin: 2.25rem 0 0.5rem; }
+h3 { font-size: 1.1rem; font-weight: 700; margin: 1.5rem 0 0.25rem; }
+.lede { font-size: 1.2rem; color: var(--muted); margin: 0 0 1.5rem; }
+.meta { color: var(--muted); font-size: 0.95rem; }
+code { font-family: var(--font-mono); font-size: 0.9em; }
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+}
+.panel > :first-child { margin-top: 0; }
+.panel > :last-child { margin-bottom: 0; }
+
+.features { display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); padding: 0; list-style: none; }
+.features li { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 0.85rem 1rem; }
+.features strong { display: block; font-family: var(--font-display); }
+
+table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.97rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.55rem 0.6rem; border-bottom: 1px solid var(--line); }
+th { font-family: var(--font-display); }
+.table-scroll { overflow-x: auto; }
+
+details { border-bottom: 1px solid var(--line); padding: 0.75rem 0; }
+summary { cursor: pointer; font-weight: 700; }
+details[open] summary { margin-bottom: 0.5rem; }
+
+footer.site { border-top: 1px solid var(--line); padding: 1.5rem 0 2.5rem; color: var(--muted); font-size: 0.9rem; }
+footer.site a { color: var(--muted); }
